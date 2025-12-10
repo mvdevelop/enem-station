@@ -1,33 +1,70 @@
 
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { FaSearch, FaUserCircle } from "react-icons/fa";
+import { supabase } from "../lib/supabaseClient";
+import { setUser } from "../store/authSlice";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const user = useSelector((state: any) => state.auth.user);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  async function handleLogout() {
+    await supabase.auth.signOut();
+    dispatch(setUser(null));
+    navigate("/login");
+  }
+
+  // Classe para animação de hover
+  const linkClass =
+    "relative group transition text-white font-medium cursor-pointer";
+
+  const underlineClass =
+    "absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full";
 
   return (
     <nav className="w-full bg-gray-900 text-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
 
-          {/* Logo + Nome */}
+          {/* Logo */}
           <div className="flex items-center gap-2">
             <img
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvectorified.com%2Fimages%2Fbook-icon-png-18.png&f=1&nofb=1&ipt=92c79cbaa2444c795354de011bced96a12a12b972c2a5000c778c316c27f39dd"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvectorified.com%2Fimages%2Fbook-icon-png-18.png&f=1&nofb=1"
               alt="logo"
               className="w-8 h-8 object-contain"
             />
             <span className="text-xl font-bold">Enem Station</span>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
-            <a href="#" className="hover:text-blue-400 transition">Home</a>
-            <a href="#" className="hover:text-blue-400 transition">Conteúdo</a>
-            <a href="#" className="hover:text-blue-400 transition">Stats</a>
-            <a href="#" className="hover:text-blue-400 transition">Contato</a>
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center gap-8">
 
-            {/* Search Bar */}
+            {/* Links com underline animado */}
+            <a href="/" className={linkClass}>
+              Home
+              <span className={underlineClass}></span>
+            </a>
+
+            <a href="#" className={linkClass}>
+              Conteúdo
+              <span className={underlineClass}></span>
+            </a>
+
+            <a href="#" className={linkClass}>
+              Stats
+              <span className={underlineClass}></span>
+            </a>
+
+            <a href="#" className={linkClass}>
+              Contato
+              <span className={underlineClass}></span>
+            </a>
+
+            {/* Search */}
             <div className="relative flex items-center">
               <FaSearch className="absolute left-3 text-gray-400" />
               <input
@@ -37,17 +74,36 @@ export default function Navbar() {
               />
             </div>
 
-            {/* Login / Signup Button */}
-            <a
-              href="/loginsignup"
-              className="px-4 py-1 rounded-lg bg-blue-600 hover:bg-blue-700 transition font-medium flex items-center gap-2"
-            >
-              <FaUserCircle size={20} />
-              Login / Signup
-            </a>
+            {/* Área de usuário */}
+            {!user ? (
+              <a
+                href="/login"
+                className="px-4 py-1 rounded-lg bg-blue-600 hover:bg-blue-700 transition font-medium flex items-center gap-2"
+              >
+                <FaUserCircle size={20} />
+                Login / Signup
+              </a>
+            ) : (
+              <div className="flex items-center gap-6">
+
+                {/* Nome do usuário */}
+                <span className="flex items-center gap-2">
+                  <FaUserCircle size={20} />
+                  {user.email}
+                </span>
+
+                {/* Botão de logout */}
+                <button
+                  onClick={handleLogout}
+                  className="px-3 py-1 bg-red-600 hover:bg-red-700 rounded-lg transition"
+                >
+                  Sair
+                </button>
+              </div>
+            )}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Button */}
           <button
             className="md:hidden focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
@@ -72,13 +128,29 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-gray-800 px-4 pb-4 flex flex-col gap-3">
-          <a href="#" className="hover:text-blue-400 transition">Home</a>
-          <a href="#" className="hover:text-blue-400 transition">Conteúdo</a>
-          <a href="#" className="hover:text-blue-400 transition">Stats</a>
-          <a href="#" className="hover:text-blue-400 transition">Contato</a>
+        <div className="md:hidden bg-gray-800 px-4 pb-4 flex flex-col gap-4">
+          
+          <a href="/" className={linkClass}>
+            Home
+            <span className={underlineClass}></span>
+          </a>
 
-          {/* Mobile Search */}
+          <a href="#" className={linkClass}>
+            Conteúdo
+            <span className={underlineClass}></span>
+          </a>
+
+          <a href="#" className={linkClass}>
+            Stats
+            <span className={underlineClass}></span>
+          </a>
+
+          <a href="#" className={linkClass}>
+            Contato
+            <span className={underlineClass}></span>
+          </a>
+
+          {/* Search */}
           <div className="relative flex items-center">
             <FaSearch className="absolute left-3 text-gray-400" />
             <input
@@ -88,14 +160,29 @@ export default function Navbar() {
             />
           </div>
 
-          {/* Login Button */}
-          <a
-            href="/loginsignup"
-            className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition font-medium text-center flex items-center justify-center gap-2"
-          >
-            <FaUserCircle size={20} />
-            Login / Signup
-          </a>
+          {/* User area */}
+          {!user ? (
+            <a
+              href="/login"
+              className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition font-medium text-center flex items-center justify-center gap-2"
+            >
+              <FaUserCircle size={20} />
+              Login / Signup
+            </a>
+          ) : (
+            <div className="flex flex-col gap-3">
+              <span className="flex items-center gap-2">
+                <FaUserCircle size={20} /> {user.email}
+              </span>
+
+              <button
+                onClick={handleLogout}
+                className="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg transition"
+              >
+                Sair
+              </button>
+            </div>
+          )}
         </div>
       )}
     </nav>
