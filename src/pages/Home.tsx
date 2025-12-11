@@ -1,10 +1,13 @@
 
+import React from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 import { FaChartBar, FaEnvelope } from "react-icons/fa";
 
 const SUBJECTS = [
@@ -58,7 +61,7 @@ const SUBJECTS = [
   },
 ];
 
-export default function Home(): JSX.Element {
+const Home: React.FC = () => {
   return (
     <main className="min-h-screen bg-gray-900 text-white">
 
@@ -156,7 +159,7 @@ export default function Home(): JSX.Element {
       </section>
 
       {/* =======================================================
-          ABOUT / ESTATÍSTICAS (mantido escuro)
+          ABOUT / ESTATÍSTICAS (escuro)
       ======================================================== */}
       <section className="py-12 px-6 sm:px-12 lg:px-24 bg-gray-800 text-white">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8">
@@ -184,7 +187,7 @@ export default function Home(): JSX.Element {
       </section>
 
       {/* =======================================================
-          CONTATO — agora com FUNDO CINZA CLARO
+          CONTATO — FUNDO CINZA CLARO
       ======================================================== */}
       <section className="py-12 px-6 sm:px-12 lg:px-24 bg-[#f7f7f7] text-black border-t border-gray-300">
         <div className="max-w-4xl mx-auto text-center">
@@ -195,7 +198,7 @@ export default function Home(): JSX.Element {
 
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
 
-            {/* CARD DE SUPORTE */}
+            {/* CARD SUPORTE */}
             <div className="bg-white border border-gray-300 p-6 rounded-lg text-left">
               <h5 className="font-semibold text-gray-900">Suporte</h5>
               <p className="mt-2 text-sm text-gray-700">
@@ -209,7 +212,7 @@ export default function Home(): JSX.Element {
             {/* FORMULÁRIO */}
             <form
               className="bg-white border border-gray-300 p-6 rounded-lg"
-              onSubmit={(e) => {
+              onSubmit={(e: React.FormEvent) => {
                 e.preventDefault();
                 alert("Mensagem enviada!");
               }}
@@ -244,4 +247,6 @@ export default function Home(): JSX.Element {
       </section>
     </main>
   );
-}
+};
+
+export default Home;
