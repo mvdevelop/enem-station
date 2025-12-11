@@ -15,7 +15,7 @@ export default function LoginSignup() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     try {
@@ -40,7 +40,11 @@ export default function LoginSignup() {
 
       setTimeout(() => navigate("/"), 800);
     } catch (err) {
-      toast.error(err.message);
+      if (err instanceof Error) {
+        toast.error(err.message);
+      } else {
+        toast.error("Ocorreu um erro inesperado.");
+      }
     }
   }
 
@@ -62,7 +66,9 @@ export default function LoginSignup() {
                 type="email"
                 className="bg-transparent w-full outline-none"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setEmail(e.target.value)
+                }
                 required
               />
             </div>
@@ -76,7 +82,9 @@ export default function LoginSignup() {
                 type="password"
                 className="bg-transparent w-full outline-none"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setPassword(e.target.value)
+                }
                 required
               />
             </div>
@@ -98,7 +106,10 @@ export default function LoginSignup() {
           </button>
         </form>
 
-        <p className="text-center mt-4 cursor-pointer hover:underline" onClick={() => setIsLogin(!isLogin)}>
+        <p
+          className="text-center mt-4 cursor-pointer hover:underline"
+          onClick={() => setIsLogin(!isLogin)}
+        >
           {isLogin ? "Não tem conta? Criar conta" : "Já possui conta? Entrar"}
         </p>
       </div>
