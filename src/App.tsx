@@ -7,15 +7,16 @@ import { supabase } from "./lib/supabaseClient";
 import { setUser } from "./store/authSlice";
 
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";   // ⬅️ IMPORTANTE
+import Footer from "./components/Footer";
+
 import Home from "./pages/Home";
 import LoginSignup from "./pages/LoginSignup";
+import Conteudo from "./pages/Conteudo";
 
 export default function App() {
   const dispatch = useDispatch();
   const user = useSelector((state: any) => state.auth.user);
 
-  // 🔥 Recupera a sessão atual do Supabase
   useEffect(() => {
     async function loadSession() {
       const { data } = await supabase.auth.getSession();
@@ -26,7 +27,6 @@ export default function App() {
 
     loadSession();
 
-    // 🔥 Listener para login/logout
     const { data: listener } = supabase.auth.onAuthStateChange(
       (_event, session) => {
         dispatch(setUser(session?.user || null));
@@ -36,27 +36,42 @@ export default function App() {
     return () => listener.subscription.unsubscribe();
   }, [dispatch]);
 
+  const Protected = ({ children }: { children: JSX.Element }) =>
+    user ? children : <Navigate to="/login" replace />;
+
   return (
-    <>
-      {/* Navbar aparece APENAS logado */}
+    <div className="flex flex-col min-h-screen bg-gray-900 text-white">
       {user && <Navbar />}
 
-      <Routes>
-        {/* 🔐 Rota protegida */}
-        <Route
-          path="/"
-          element={user ? <Home /> : <Navigate to="/login" replace />}
-        />
+      {/* 🔥 Agora NÃO TEM MAIS SIDEBAR AQUI */}
+      <main className="flex-1 p-4 md:p-8">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Protected>
+                <Home />
+              </Protected>
+            }
+          />
 
-        {/* Login/Signup - somente SEM usuário */}
-        <Route
-          path="/login"
-          element={!user ? <LoginSignup /> : <Navigate to="/" replace />}
-        />
-      </Routes>
+          <Route
+            path="/conteudo/:materia/:topico"
+            element={
+              <Protected>
+                <Conteudo />
+              </Protected>
+            }
+          />
 
-      {/* ⬇️ Footer também só aparece SE o usuário estiver logado */}
+          <Route
+            path="/login"
+            element={!user ? <LoginSignup /> : <Navigate to="/" replace />}
+          />
+        </Routes>
+      </main>
+
       {user && <Footer />}
-    </>
+    </div>
   );
 }

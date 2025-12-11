@@ -65,9 +65,6 @@ const Home: React.FC = () => {
   return (
     <main className="min-h-screen bg-gray-900 text-white">
 
-      {/* =======================================================
-          BANNER
-      ======================================================== */}
       <section
         className="relative h-[52vh] sm:h-[60vh] md:h-[68vh] lg:h-[72vh] overflow-hidden"
         aria-label="Banner Enem Station"
@@ -106,9 +103,6 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* =======================================================
-          MATÉRIAS — agora com FUNDO CINZA CLARO
-      ======================================================== */}
       <section className="py-12 px-6 sm:px-12 lg:px-24 bg-[#f7f7f7] text-black">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-6">
@@ -158,9 +152,6 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* =======================================================
-          ABOUT / ESTATÍSTICAS (escuro)
-      ======================================================== */}
       <section className="py-12 px-6 sm:px-12 lg:px-24 bg-gray-800 text-white">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8">
           <div className="flex-1">
@@ -186,9 +177,6 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* =======================================================
-          CONTATO — FUNDO CINZA CLARO
-      ======================================================== */}
       <section className="py-12 px-6 sm:px-12 lg:px-24 bg-[#f7f7f7] text-black border-t border-gray-300">
         <div className="max-w-4xl mx-auto text-center">
           <h4 className="text-2xl font-bold">Fale conosco</h4>
@@ -235,7 +223,7 @@ const Home: React.FC = () => {
               <div className="mt-4 flex justify-center">
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-2 bg-blue-600 px-4 py-2 rounded-md text-white hover:bg-blue-500 transition"
+                  className="inline-flex items-center gap-2 bg-blue-600 px-4 py-2 rounded-md text-white hover:bg-blue-500 transition cursor-pointer"
                 >
                   <FaEnvelope />
                   Enviar Mensagem

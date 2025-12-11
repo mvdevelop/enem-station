@@ -18,10 +18,8 @@ export default function Navbar() {
     navigate("/login");
   }
 
-  // Classe para animação de hover
   const linkClass =
     "relative group transition text-white font-medium cursor-pointer";
-
   const underlineClass =
     "absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full";
 
@@ -42,8 +40,6 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-
-            {/* Links com underline animado */}
             <a href="/" className={linkClass}>
               Home
               <span className={underlineClass}></span>
@@ -70,32 +66,33 @@ export default function Navbar() {
               <input
                 type="text"
                 placeholder="Buscar..."
-                className="pl-10 pr-3 py-1 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring focus:ring-blue-500"
+                className="pl-10 pr-3 py-1 rounded-lg bg-gray-800 border border-gray-700 
+                           focus:outline-none focus:ring focus:ring-blue-500"
               />
             </div>
 
-            {/* Área de usuário */}
+            {/* User area */}
             {!user ? (
               <a
                 href="/login"
-                className="px-4 py-1 rounded-lg bg-blue-600 hover:bg-blue-700 transition font-medium flex items-center gap-2"
+                className="px-4 py-1 rounded-lg bg-blue-600 hover:bg-blue-700 transition font-medium 
+                           flex items-center gap-2 cursor-pointer"
               >
                 <FaUserCircle size={20} />
                 Login / Signup
               </a>
             ) : (
               <div className="flex items-center gap-6">
-
-                {/* Nome do usuário */}
                 <span className="flex items-center gap-2">
                   <FaUserCircle size={20} />
                   {user.email}
                 </span>
 
-                {/* Botão de logout */}
+                {/* Logout button */}
                 <button
                   onClick={handleLogout}
-                  className="px-3 py-1 bg-red-600 hover:bg-red-700 rounded-lg transition"
+                  className="px-3 py-1 bg-red-600 hover:bg-red-700 rounded-lg transition 
+                             cursor-pointer active:scale-95"
                 >
                   Sair
                 </button>
@@ -105,7 +102,7 @@ export default function Navbar() {
 
           {/* Mobile Button */}
           <button
-            className="md:hidden focus:outline-none"
+            className="md:hidden focus:outline-none cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
           >
             <svg
@@ -126,10 +123,10 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden bg-gray-800 px-4 pb-4 flex flex-col gap-4">
-          
+
           <a href="/" className={linkClass}>
             Home
             <span className={underlineClass}></span>
@@ -156,15 +153,17 @@ export default function Navbar() {
             <input
               type="text"
               placeholder="Buscar..."
-              className="pl-10 pr-3 py-1 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring focus:ring-blue-500"
+              className="pl-10 pr-3 py-1 rounded-lg bg-gray-700 border border-gray-600 
+                         focus:outline-none focus:ring focus:ring-blue-500"
             />
           </div>
 
-          {/* User area */}
+          {/* User Area */}
           {!user ? (
             <a
               href="/login"
-              className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition font-medium text-center flex items-center justify-center gap-2"
+              className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition 
+                         font-medium text-center flex items-center justify-center gap-2 cursor-pointer"
             >
               <FaUserCircle size={20} />
               Login / Signup
@@ -175,9 +174,11 @@ export default function Navbar() {
                 <FaUserCircle size={20} /> {user.email}
               </span>
 
+              {/* MOBILE logout with cursor-pointer */}
               <button
                 onClick={handleLogout}
-                className="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg transition"
+                className="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg transition 
+                           cursor-pointer active:scale-95"
               >
                 Sair
               </button>
