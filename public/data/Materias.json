@@ -1,0 +1,408 @@
+
+{
+  "ENEM": {
+    "AreasConhecimento": [
+      {
+        "nome": "Linguagens, Códigos e suas Tecnologias",
+        "materias": [
+          {
+            "nome": "Língua Portuguesa",
+            "subtopicos": [
+              {
+                "nome": "Interpretação de Texto",
+                "conteudo": "Compreensão literal e inferencial de textos, relações entre partes do texto, identificação de tipos e gêneros textuais, função da linguagem"
+              },
+              {
+                "nome": "Gramática",
+                "conteudo": "Classes gramaticais, concordância verbal e nominal, regência verbal e nominal, crase, pontuação, acentuação, ortografia"
+              },
+              {
+                "nome": "Figuras de Linguagem",
+                "conteudo": "Metáfora, metonímia, ironia, hipérbole, personificação, antítese, eufemismo, aliteração, assonância"
+              },
+              {
+                "nome": "Variação Linguística",
+                "conteudo": "Norma culta vs. norma coloquial, variações regionais e sociais, preconceito linguístico"
+              },
+              {
+                "nome": "Coesão e Coerência",
+                "conteudo": "Elementos de ligação, referência, substituição, paralelismo, progressão temática"
+              }
+            ]
+          },
+          {
+            "nome": "Literatura",
+            "subtopicos": [
+              {
+                "nome": "Escolas Literárias Brasileiras",
+                "conteudo": "Quinhentismo, Barroco, Arcadismo, Romantismo, Realismo, Naturalismo, Parnasianismo, Simbolismo, Modernismo, Pós-modernismo"
+              },
+              {
+                "nome": "Figuras Importantes",
+                "conteudo": "Machado de Assis, Clarice Lispector, Guimarães Rosa, Carlos Drummond de Andrade, Graciliano Ramos, José de Alencar"
+              },
+              {
+                "nome": "Gêneros Literários",
+                "conteudo": "Lírico, épico, dramático, narrativo, conto, crônica, romance, poesia, teatro"
+              },
+              {
+                "nome": "Literatura Contemporânea",
+                "conteudo": "Literatura marginal, literatura digital, novos formatos e linguagens"
+              }
+            ]
+          },
+          {
+            "nome": "Inglês/Espanhol",
+            "subtopicos": [
+              {
+                "nome": "Compreensão Textual",
+                "conteudo": "Leitura e interpretação de textos diversos, identificação de informações explícitas e implícitas"
+              },
+              {
+                "nome": "Vocabulário",
+                "conteudo": "Palavras cognatas, falsos cognatos, expressões idiomáticas, formação de palavras"
+              },
+              {
+                "nome": "Estruturas Gramaticais",
+                "conteudo": "Tempos verbais básicos, preposições, artigos, pronomes, formação de frases"
+              },
+              {
+                "nome": "Tipos de Texto",
+                "conteudo": "Cartazes, anúncios, emails, cartas, notícias, artigos de opinião"
+              }
+            ]
+          },
+          {
+            "nome": "Artes",
+            "subtopicos": [
+              {
+                "nome": "História da Arte",
+                "conteudo": "Arte pré-histórica, arte clássica, arte medieval, renascentista, barroca, moderna, contemporânea"
+              },
+              {
+                "nome": "Movimentos Artísticos",
+                "conteudo": "Modernismo brasileiro, Tropicalismo, Arte Conceitual, Pop Art, Expressionismo, Surrealismo"
+              },
+              {
+                "nome": "Arte Brasileira",
+                "conteudo": "Arte indígena, arte afro-brasileira, artistas nacionais (Tarsila, Portinari, Di Cavalcanti)"
+              },
+              {
+                "nome": "Elementos Visuais",
+                "conteudo": "Linha, forma, cor, textura, espaço, volume, perspectiva, composição"
+              }
+            ]
+          },
+          {
+            "nome": "Educação Física",
+            "subtopicos": [
+              {
+                "nome": "Corpo e Saúde",
+                "conteudo": "Anatomia básica, sistemas corporais, exercícios físicos, qualidade de vida"
+              },
+              {
+                "nome": "Esportes",
+                "conteudo": "História dos esportes, modalidades olímpicas, esportes coletivos e individuais"
+              },
+              {
+                "nome": "Cultura Corporal",
+                "conteudo": "Dança, jogos, lutas, ginástica, expressão corporal"
+              },
+              {
+                "nome": "Inclusão Social",
+                "conteudo": "Esporte adaptado, acessibilidade, práticas inclusivas"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nome": "Matemática e suas Tecnologias",
+        "materias": [
+          {
+            "nome": "Matemática",
+            "subtopicos": [
+              {
+                "nome": "Aritmética",
+                "conteudo": "Operações básicas, múltiplos e divisores, números primos, MMC e MDC, porcentagem, juros simples e compostos"
+              },
+              {
+                "nome": "Álgebra",
+                "conteudo": "Equações de 1º e 2º grau, sistemas de equações, funções (afim, quadrática, exponencial, logarítmica), polinômios"
+              },
+              {
+                "nome": "Geometria Plana",
+                "conteudo": "Áreas e perímetros de figuras planas, teorema de Pitágoras, relações métricas, semelhança de triângulos"
+              },
+              {
+                "nome": "Geometria Espacial",
+                "conteudo": "Área e volume de sólidos (prismas, pirâmides, cilindros, cones, esferas), relações espaciais"
+              },
+              {
+                "nome": "Geometria Analítica",
+                "conteudo": "Ponto, reta, circunferência, distância entre pontos, equações da reta, posições relativas"
+              },
+              {
+                "nome": "Trigonometria",
+                "conteudo": "Razões trigonométricas, lei dos senos e cossenos, relações fundamentais, círculo trigonométrico"
+              },
+              {
+                "nome": "Estatística",
+                "conteudo": "Média, mediana, moda, desvio padrão, variância, leitura de gráficos e tabelas"
+              },
+              {
+                "nome": "Probabilidade",
+                "conteudo": "Espaço amostral, eventos, probabilidade condicional, princípio multiplicativo"
+              },
+              {
+                "nome": "Análise Combinatória",
+                "conteudo": "Princípio fundamental da contagem, permutações, arranjos, combinações"
+              },
+              {
+                "nome": "Matemática Financeira",
+                "conteudo": "Juros simples e compostos, montante, capital, taxa, período, inflação"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nome": "Ciências da Natureza e suas Tecnologias",
+        "materias": [
+          {
+            "nome": "Física",
+            "subtopicos": [
+              {
+                "nome": "Mecânica",
+                "conteudo": "Cinemática (MRU, MRUV), dinâmica (leis de Newton), energia, trabalho, potência, quantidade de movimento"
+              },
+              {
+                "nome": "Termodinâmica",
+                "conteudo": "Calor, temperatura, dilatação térmica, propagação do calor, leis da termodinâmica, máquinas térmicas"
+              },
+              {
+                "nome": "Ondulatória",
+                "conteudo": "Ondas mecânicas e eletromagnéticas, reflexão, refração, difração, interferência, acústica"
+              },
+              {
+                "nome": "Óptica",
+                "conteudo": "Reflexão, refração, lentes, espelhos, formação de imagens, instrumentos ópticos"
+              },
+              {
+                "nome": "Eletricidade",
+                "conteudo": "Carga elétrica, corrente, tensão, resistência, circuitos, potência elétrica, leis de Ohm"
+              },
+              {
+                "nome": "Magnetismo",
+                "conteudo": "Campo magnético, força magnética, eletromagnetismo, indução eletromagnética"
+              },
+              {
+                "nome": "Física Moderna",
+                "conteudo": "Relatividade, física quântica, radioatividade, fusão e fissão nuclear"
+              }
+            ]
+          },
+          {
+            "nome": "Química",
+            "subtopicos": [
+              {
+                "nome": "Química Geral",
+                "conteudo": "Matéria e energia, átomo, tabela periódica, ligações químicas, funções inorgânicas"
+              },
+              {
+                "nome": "Química Orgânica",
+                "conteudo": "Hidrocarbonetos, funções orgânicas (álcoois, aldeídos, cetonas, ácidos), reações orgânicas, polímeros"
+              },
+              {
+                "nome": "Físico-Química",
+                "conteudo": "Termoquímica, cinética química, equilíbrio químico, eletroquímica (pilhas, eletrólise)"
+              },
+              {
+                "nome": "Química Ambiental",
+                "conteudo": "Poluição, tratamento de água e esgoto, efeito estufa, chuva ácida, camada de ozônio"
+              },
+              {
+                "nome": "Cálculos Químicos",
+                "conteudo": "Fórmulas, balanceamento de equações, estequiometria, concentração de soluções"
+              }
+            ]
+          },
+          {
+            "nome": "Biologia",
+            "subtopicos": [
+              {
+                "nome": "Biologia Celular",
+                "conteudo": "Células procarióticas e eucarióticas, organelas, membrana plasmática, divisão celular"
+              },
+              {
+                "nome": "Genética",
+                "conteudo": "DNA, RNA, síntese proteica, leis de Mendel, herança genética, engenharia genética"
+              },
+              {
+                "nome": "Ecologia",
+                "conteudo": "Cadeias alimentares, ciclos biogeoquímicos, relações ecológicas, sucessão ecológica, biomas brasileiros"
+              },
+              {
+                "nome": "Fisiologia Humana",
+                "conteudo": "Sistemas digestório, respiratório, circulatório, nervoso, endócrino, excretor, reprodutor"
+              },
+              {
+                "nome": "Evolução",
+                "conteudo": "Teorias evolutivas, evidências da evolução, seleção natural, especiação"
+              },
+              {
+                "nome": "Saúde Pública",
+                "conteudo": "Doenças infecciosas, vacinas, epidemias, saúde coletiva, saneamento básico"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nome": "Ciências Humanas e suas Tecnologias",
+        "materias": [
+          {
+            "nome": "História",
+            "subtopicos": [
+              {
+                "nome": "História do Brasil",
+                "conteudo": "Período colonial, ciclo do açúcar, mineração, independência, império, república, era Vargas, ditadura militar"
+              },
+              {
+                "nome": "História Geral",
+                "conteudo": "Antiguidade clássica, idade média, renascimento, revoluções industriais, guerras mundiais, guerra fria"
+              },
+              {
+                "nome": "História Contemporânea",
+                "conteudo": "Globalização, conflitos atuais, organizações internacionais, movimentos sociais"
+              },
+              {
+                "nome": "Cultura e Patrimônio",
+                "conteudo": "Patrimônio cultural brasileiro, manifestações culturais, preservação histórica"
+              }
+            ]
+          },
+          {
+            "nome": "Geografia",
+            "subtopicos": [
+              {
+                "nome": "Geografia Física",
+                "conteudo": "Clima, relevo, hidrografia, vegetação, solos, recursos naturais"
+              },
+              {
+                "nome": "Geografia Humana",
+                "conteudo": "Demografia, urbanização, migrações, industrialização, agricultura, globalização"
+              },
+              {
+                "nome": "Geografia do Brasil",
+                "conteudo": "Regiões brasileiras, problemas urbanos, agronegócio, recursos energéticos, questões ambientais"
+              },
+              {
+                "nome": "Geografia Política",
+                "conteudo": "Divisão territorial, conflitos internacionais, blocos econômicos, geopolítica mundial"
+              }
+            ]
+          },
+          {
+            "nome": "Filosofia",
+            "subtopicos": [
+              {
+                "nome": "Filosofia Antiga",
+                "conteudo": "Pré-socráticos, Sócrates, Platão, Aristóteles, filosofia helenística"
+              },
+              {
+                "nome": "Filosofia Moderna",
+                "conteudo": "Renascimento, racionalismo, empirismo, iluminismo, idealismo alemão"
+              },
+              {
+                "nome": "Filosofia Contemporânea",
+                "conteudo": "Existencialismo, fenomenologia, filosofia analítica, escola de Frankfurt"
+              },
+              {
+                "nome": "Ética e Política",
+                "conteudo": "Teorias éticas, justiça, liberdade, democracia, direitos humanos"
+              }
+            ]
+          },
+          {
+            "nome": "Sociologia",
+            "subtopicos": [
+              {
+                "nome": "Teorias Sociológicas",
+                "conteudo": "Marx, Durkheim, Weber, pensamento social brasileiro"
+              },
+              {
+                "nome": "Estrutura Social",
+                "conteudo": "Classes sociais, desigualdade, mobilidade social, estratificação"
+              },
+              {
+                "nome": "Cultura e Identidade",
+                "conteudo": "Diversidade cultural, identidade, etnia, gênero, multiculturalismo"
+              },
+              {
+                "nome": "Movimentos Sociais",
+                "conteudo": "Movimentos urbanos, rurais, estudantis, indígenas, negros, feministas"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Redacao": {
+      "caracteristicas": [
+        "Texto dissertativo-argumentativo em prosa",
+        "Mínimo de 7 e máximo de 30 linhas",
+        "Desenvolvimento sobre tema de ordem social, científica, cultural ou política",
+        "Defesa de ponto de vista com argumentos",
+        "Proposta de intervenção social respeitando direitos humanos"
+      ],
+      "competencias": [
+        {
+          "nome": "Domínio da norma padrão",
+          "descricao": "Demonstrar domínio da modalidade escrita formal da Língua Portuguesa"
+        },
+        {
+          "nome": "Compreensão da proposta",
+          "descricao": "Compreender a proposta de redação e aplicar conceitos das várias áreas de conhecimento"
+        },
+        {
+          "nome": "Seleção e organização",
+          "descricao": "Selecionar, relacionar, organizar e interpretar informações, fatos, opiniões e argumentos em defesa de um ponto de vista"
+        },
+        {
+          "nome": "Conhecimento linguístico",
+          "descricao": "Demonstrar conhecimento dos mecanismos linguísticos necessários para a construção da argumentação"
+        },
+        {
+          "nome": "Proposta de intervenção",
+          "descricao": "Elaborar proposta de intervenção para o problema abordado, respeitando os direitos humanos"
+        }
+      ],
+      "estrutura": {
+        "introducao": "Apresentação do tema e tese (ponto de vista)",
+        "desenvolvimento": "Argumentação com dados, exemplos, fatos, citações",
+        "conclusao": "Retomada da tese e proposta de intervenção detalhada"
+      },
+      "dicas": [
+        "Praticar pelo menos uma redação por semana",
+        "Ler editoriais de jornais e revistas",
+        "Estudar temas atuais e seus desdobramentos",
+        "Treinar a estrutura dissertativa",
+        "Atenção à coerência e coesão textual"
+      ]
+    },
+    "estatisticas": {
+      "total_areas": 4,
+      "total_materias": 13,
+      "total_subtopicos": 72,
+      "questoes_por_area": {
+        "Linguagens": 45,
+        "Matematica": 45,
+        "Natureza": 45,
+        "Humanas": 45
+      },
+      "tempo_prova": "5h30 (1º dia) e 5h (2º dia)",
+      "pontuacao_maxima": 1000
+    }
+  }
+}

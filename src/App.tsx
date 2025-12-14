@@ -7,9 +7,10 @@ import { supabase } from "./lib/supabaseClient";
 import { setUser } from "./store/authSlice";
 
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";   // ⬅️ IMPORTANTE
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import LoginSignup from "./pages/LoginSignup";
+import Conteudo from "./pages/Conteudo";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -42,10 +43,15 @@ export default function App() {
       {user && <Navbar />}
 
       <Routes>
-        {/* 🔐 Rota protegida */}
+        {/* 🔐 Rotas protegidas */}
         <Route
           path="/"
           element={user ? <Home /> : <Navigate to="/login" replace />}
+        />
+
+        <Route
+          path="/conteudo"
+          element={user ? <Conteudo /> : <Navigate to="/login" replace />}
         />
 
         {/* Login/Signup - somente SEM usuário */}
